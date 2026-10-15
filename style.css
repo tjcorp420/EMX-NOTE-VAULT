@@ -5,3 +5,22 @@
 /* iOS rapid tap protection, limited to keypad */
 .keypad,.keypad button,#erase{touch-action:manipulation;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}.keypad button{-webkit-tap-highlight-color:transparent}
 .organize,.noteMeta{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:10px 0 20px}.organize select,.organize input,.noteMeta select,.noteMeta input,#linkModal input{min-width:0;flex:1;background:#151a2c;border:1px solid #35334e;border-radius:10px;padding:11px;color:#eee;font:inherit;font-size:13px}.organize .mini{padding:11px;border:1px solid #7d5ab8;background:#221b3b;border-radius:10px}.editorbar{flex-wrap:wrap}.fileActions{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:12px}.fileActions button{padding:8px!important;margin:0!important;border:1px solid #52456b;border-radius:8px;background:#25223b;color:#eee;font-size:12px}.fileActions .primary{background:#6541a8}.file{padding-bottom:65px}.noteMeta{margin-top:20px}#linkModal label{display:flex;flex-direction:column;gap:8px;margin:12px 0;color:#c7b6e9;font-size:13px}#linkModal input{width:100%;flex:auto}@media(max-width:550px){.organize{gap:6px}.organize select,.organize input{font-size:12px;max-width:100%}.fileActions button{font-size:11px!important;padding:6px!important}}
+
+/* v4.1 iPhone standalone safe-area: keep header below status bar */
+@media (display-mode: standalone) {
+  .app { padding-top: max(66px, env(safe-area-inset-top)); }
+  header { min-height: 74px; height: auto; padding-bottom: 12px; }
+}
+@supports (-webkit-touch-callout: none) {
+  @media (display-mode: standalone) {
+    .app { padding-top: max(66px, env(safe-area-inset-top)); }
+  }
+}
+.brand { min-height: 56px; padding: 7px 5px; flex-shrink: 0; }
+.brandmark { flex-shrink: 0; }
+header { gap: 12px; }
+.status { text-align: right; white-space: nowrap; }
+@media (max-width: 400px) {
+  .brand { gap: 8px; }
+  .brandlabel { font-size: 12px; letter-spacing: 1px; }
+}
