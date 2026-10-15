@@ -24,3 +24,9 @@ header { gap: 12px; }
   .brand { gap: 8px; }
   .brandlabel { font-size: 12px; letter-spacing: 1px; }
 }
+
+/* v4.2 media gallery and full-screen navigation */
+.file{min-width:0;overflow:hidden}.file strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere;word-break:break-word;min-height:2.6em;line-height:1.3}.mediaThumb{width:100%;height:150px;position:relative;display:grid;place-items:center;overflow:hidden;background:#090d19;border-radius:12px;margin-bottom:12px;color:#82759d}.mediaThumb img{width:100%;height:100%;object-fit:cover;display:block}.playBadge{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border-radius:50%;background:#080812b8;color:white;font-size:21px;width:46px;height:46px;display:grid;place-items:center}.viewerStage{display:flex;align-items:center;gap:5px;min-height:35vh}.viewerStage #viewerContent{flex:1;min-width:0;touch-action:pan-y}.viewerNav{flex:0 0 34px;min-height:72px;border:1px solid #72529b88;background:#201c35;color:white;border-radius:10px;font-size:32px;touch-action:manipulation}.viewerCounter{text-align:center;color:#cbb4f5;font-size:13px;margin:10px}.viewerbox{width:min(100%,1000px)}.viewerbar strong{max-width:75%;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}@media(max-width:550px){.mediaThumb{height:125px}.viewerbox{padding:9px}.viewerNav{flex-basis:30px;min-height:58px;font-size:28px}.file strong{font-size:12px}}
+
+/* Gallery preview tap targets */
+.mediaThumb{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}.mediaThumb:focus-visible{outline:2px solid #35e0ff;outline-offset:3px}.mediaThumb .playBadge{pointer-events:none}

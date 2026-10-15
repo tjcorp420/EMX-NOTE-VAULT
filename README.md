@@ -23,3 +23,10 @@ Static PWA for Vercel. No npm, backend, account, or environment variables needed
 - Notes are not encrypted; only vault file contents are encrypted. Vault filenames, types, and sizes are stored unencrypted in IndexedDB.
 - No media is uploaded to Vercel. The application source code is publicly accessible as with any website.
 - This is an initial version, not independently security-audited. Test with disposable files before trusting it.
+
+
+## v4.2 gallery update
+- Decrypted, device-local photo thumbnails and video poster frames (where the browser supports decoding).
+- Truncated long filenames in cards; original filenames preserved.
+- Full-screen previous/next buttons, swipe navigation, and media position counter.
+- Uses the same IndexedDB schema and encryption format.
